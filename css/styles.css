@@ -3,6 +3,17 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    cursor: url('images/custom-cursor.png'), auto;
+}
+
+/* Custom cursor specifically for links (hover state) */
+a:hover {
+    cursor: url('images/custom-hand-cursor.png'), pointer; /* Custom hand cursor on hover */
+}
+
+header {
+    z-index: 1000;
+    position: relative;
 }
 
 header nav ul {
@@ -10,17 +21,20 @@ header nav ul {
     padding: 0;
     background-color: #333;
     margin: 0;
-    overflow: hidden;
+    z-index: 1000;
+    position: relative;
 }
 
 header nav ul li {
     display: inline-block;
     margin-right: 20px;
+    position: relative;
 }
 
 header nav ul li a {
     color: white;
-    padding: 14px 20px;
+    padding: 14px 14px; /* Slightly increase padding */
+    font-size: 18px; /* Increase font size */
     text-decoration: none;
     display: block;
 }
@@ -28,9 +42,162 @@ header nav ul li a {
 header nav ul li a:hover {
     background-color: #111;
 }
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        padding: 15px;
+    }
+
+    .hamburger .bar {
+        display: block;
+        width: 30px;
+        height: 4px;
+        margin: 5px auto;
+        background-color: black;
+    }
+
+    header nav ul {
+        display: none; /* Hide the menu by default */
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+    }
+
+    header nav ul.show {
+        display: flex; /* Show the menu when toggled */
+    }
+
+    header nav ul li {
+        display: block;
+        width: 100%;
+    }
+
+    header nav ul li a {
+        padding: 15px 20px; /* Increase padding for more spacing */
+        font-size: 18px; /* Increase font size */
+    }
+}
+
+.hero-section {
+    background-image: url('images/social_media.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent overlay to improve text readability */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.hero-section h1 {
+    font-size: 3em; /* Adjust the size as needed */
+    font-weight: bold;
+    margin: 0;
+}
+
+.hero-section p {
+    font-size: 1.5em; /* Adjust the size as needed */
+    margin: 10px 0 0 0;
+}
+
+/* Dropdown CSS */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #333;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1001; /* Ensure dropdown content is above other elements */
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #111;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #111;
+}
 
 section {
     padding: 20px;
+    background-color: #fff;
+    margin: 20px 0;
+    position: relative;
+    z-index: 1; /* Ensure content is below dropdown */
+}
+
+#search input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#searchResults {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10; /* Ensure dropdown is above other elements */
+    margin-top: 5px; /* Adds space between the input and the dropdown */
+    z-index: 1010; /* Ensuring the search dropdown is above everything else */
+}
+
+.search-result-item {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.search-result-item:hover {
+    background-color: #f1f1f1;
+}
+
+#search {
+    position: relative;/* Increase space below the search section to avoid overlap */
+    z-index: 1000; /* Ensure search section is on top */
 }
 
 footer {
@@ -38,18 +205,15 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
+    z-index: 1; /* Ensure footer is below dropdown */
 }
 
 @media only screen and (max-width: 600px) {
     header nav ul li {
         display: block;
         margin: 0;
-    }
-    
-    footer {
-        position: relative;
     }
 }

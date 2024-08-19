@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMC - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/home.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul id="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Information & Legislation</a>
+                    <div class="dropdown-content">
+                        <a href="information.html">Information</a>
+                        <a href="legislation.html">Legislation</a>
+                    </div>
+                </li>                
+                <li><a href="apps.html">Most Popular Apps</a></li>
+                <li><a href="parents.html">How Parents Can Help</a></li>
+                <li><a href="livestreaming.html">Livestreaming</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="php/logout.php">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to Social Media Campaigns</h1>
+            <p>Stay safe online with our tips and guidelines.</p>
+        </div>
+    </section>    
+
+    <!-- Search Bar -->
+    <section id="search">
+        <h2>Search Our Resources</h2>
+        <input type="text" id="searchBar" placeholder="Search..." onkeyup="searchFunction()">
+        <div id="searchResults" class="dropdown-content" style="display:none;"></div>
+    </section>
+ 
+    <!-- Two Web Services -->
+    <section id="web-services">
+        <h2>Today's Information</h2>
+        <div id="weather">
+            <h3>Current Weather</h3>
+            <p id="weatherData">Loading weather...</p>
+        </div>
+        <div id="quote">
+            <h3>Daily Quote</h3>
+            <p id="quoteData">Loading quote...</p>
+        </div>
+    </section>
+
+    <!-- Popular Social Media Apps -->
+    <section id="popular-apps">
+        <h2>Most Popular Social Media Apps</h2>
+        <ul>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Twitter</li>
+            <li>Snapchat</li>
+            <li>TikTok</li>
+        </ul>
+    </section>
+
+    <!-- How to Stay Safe Online -->
+    <section id="safety-tips">
+        <h2>How to Stay Safe Online</h2>
+        <p>Follow these guidelines to ensure your safety on social media:</p>
+        <ul>
+            <li>Never share personal information online.</li>
+            <li>Be cautious of who you connect with.</li>
+            <li>Use strong passwords and update them regularly.</li>
+            <li>Report any suspicious activity.</li>
+            <li>Keep your software up to date.</li>
+        </ul>
+    </section>
+
+    <!-- 3D Illustration -->
+    <section id="3d-illustration">
+        <h2>3D Illustration</h2>
+        <div class="sketchfab-embed-wrapper"> <iframe title="Facebook" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/3f200f047cbb4266b8d178145ded1dca/embed?autostart=1"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/facebook-3f200f047cbb4266b8d178145ded1dca?utm_medium=embed&utm_campaign=share-popup&utm_content=3f200f047cbb4266b8d178145ded1dca" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Facebook </a> by <a href="https://sketchfab.com/miguel.acf204?utm_medium=embed&utm_campaign=share-popup&utm_content=3f200f047cbb4266b8d178145ded1dca" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> miguel.acf204 </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=3f200f047cbb4266b8d178145ded1dca" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>You are here: Home</p>
+        <p>&copy; 2024 SMC Ltd. | <a href="https://facebook.com">Facebook</a> | <a href="https://twitter.com">Twitter</a></p>
+    </footer>
+</body>
+</html>

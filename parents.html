@@ -3,30 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMC - Parents Help</title>
+    <title>SMC - How Parents Can Help</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="information.html">Information</a></li>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul id="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Information & Legislation</a>
+                    <div class="dropdown-content">
+                        <a href="information.html">Information</a>
+                        <a href="legislation.html">Legislation</a>
+                    </div>
+                </li>                
                 <li><a href="apps.html">Most Popular Apps</a></li>
                 <li><a href="parents.html">How Parents Can Help</a></li>
                 <li><a href="livestreaming.html">Livestreaming</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="legislation.html">Legislation</a></li>
+                <li><a href="php/logout.php">Logout</a></li>
             </ul>
         </nav>
     </header>
 
-    <section>
+    <section class="content-section">
         <h1>How Parents Can Help</h1>
-        <p>Top tips for parents to support healthy social media use by teens.</p>
+        <p>Learn how to guide your teenagers towards healthy social media habits.</p>
     </section>
 
+    <section id="tips">
+        <h2>Top Tips for Parents</h2>
+        <ul>
+            <li>Set clear boundaries and expectations for social media use.</li>
+            <li>Discuss the potential risks of sharing personal information online.</li>
+            <li>Monitor their social media activity and have open conversations about it.</li>
+            <li>Encourage them to think critically about the content they encounter.</li>
+            <li>Be a good role model by practicing safe social media habits yourself.</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
     <footer>
+        <p>You are here: How Parents Can Help</p>
         <p>&copy; 2024 SMC Ltd. | <a href="https://facebook.com">Facebook</a> | <a href="https://twitter.com">Twitter</a></p>
     </footer>
 </body>

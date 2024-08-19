@@ -9,24 +9,43 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="information.html">Information</a></li>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul id="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Information & Legislation</a>
+                    <div class="dropdown-content">
+                        <a href="information.html">Information</a>
+                        <a href="legislation.html">Legislation</a>
+                    </div>
+                </li>                
                 <li><a href="apps.html">Most Popular Apps</a></li>
                 <li><a href="parents.html">How Parents Can Help</a></li>
                 <li><a href="livestreaming.html">Livestreaming</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="legislation.html">Legislation</a></li>
+                <li><a href="php/logout.php">Logout</a></li>
             </ul>
         </nav>
     </header>
 
-    <section>
-        <h1>Information</h1>
-        <p>This page provides details about our social media campaigns aimed at keeping teenagers safe online.</p>
+    <section class="content-section">
+        <h1>About Our Campaigns</h1>
+        <p>Our mission is to keep teenagers safe online by providing educational resources, tips, and campaigns designed to promote healthy and secure social media usage.</p>
+        <img src="images/campaigns.jpg" alt="Campaigns" style="max-width: 100%; height: auto;">
     </section>
 
+    <section class="details-section">
+        <h2>Our Vision</h2>
+        <p>We envision a world where teenagers can enjoy social media without fear of exploitation, cyberbullying, or exposure to inappropriate content. Our campaigns are focused on educating young people about the potential risks of social media and how to navigate them safely.</p>
+    </section>
+
+    <!-- Footer -->
     <footer>
+        <p>You are here: Information</p>
         <p>&copy; 2024 SMC Ltd. | <a href="https://facebook.com">Facebook</a> | <a href="https://twitter.com">Twitter</a></p>
     </footer>
 </body>

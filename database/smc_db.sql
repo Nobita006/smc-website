@@ -10,3 +10,8 @@ CREATE TABLE members (
     login_attempts INT DEFAULT 0,
     lock_time TIMESTAMP NULL
 );
+
+CREATE TABLE safety_tips (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tip TEXT NOT NULL
+);

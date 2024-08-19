@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('config.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -11,19 +12,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($user) {
         if ($user['login_attempts'] >= 3 && time() - strtotime($user['lock_time']) < 600) {
-            echo "Account locked. Try again later.";
+            echo "<script>
+                    alert('Account locked. Try again later.');
+                    window.location.href='../login.html';
+                  </script>";
         } else {
             if (password_verify($password, $user['password'])) {
-                echo "Login successful!";
+                $_SESSION['email'] = $email;
                 mysqli_query($conn, "UPDATE members SET login_attempts=0 WHERE email='$email'");
+                header("Location: ../home.html");
             } else {
                 $attempts = $user['login_attempts'] + 1;
                 mysqli_query($conn, "UPDATE members SET login_attempts=$attempts, lock_time=NOW() WHERE email='$email'");
-                echo "Incorrect password.";
+                echo "<script>
+                        alert('Incorrect password.');
+                        window.location.href='../login.html';
+                      </script>";
             }
         }
     } else {
-        echo "No account found with that email.";
+        echo "<script>
+                alert('Username does not appear in the database.');
+                window.location.href='../login.html';
+              </script>";
     }
 }
 ?>

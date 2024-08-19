@@ -9,24 +9,48 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="information.html">Information</a></li>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul id="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Information & Legislation</a>
+                    <div class="dropdown-content">
+                        <a href="information.html">Information</a>
+                        <a href="legislation.html">Legislation</a>
+                    </div>
+                </li>                
                 <li><a href="apps.html">Most Popular Apps</a></li>
                 <li><a href="parents.html">How Parents Can Help</a></li>
                 <li><a href="livestreaming.html">Livestreaming</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="legislation.html">Legislation</a></li>
+                <li><a href="php/logout.php">Logout</a></li>
             </ul>
         </nav>
     </header>
 
-    <section>
-        <h1>Livestreaming</h1>
-        <p>Overview of livestreaming and how to do it safely.</p>
+    <section class="content-section">
+        <h1>Livestreaming Safety</h1>
+        <p>Livestreaming can be fun and engaging, but it's important to know how to stay safe.</p>
     </section>
 
+    <section id="livestreaming-tips">
+        <h2>How to Livestream Safely</h2>
+        <ul>
+            <li>Be aware of what you're sharing and who can see it.</li>
+            <li>Use privacy settings to control who can view your livestream.</li>
+            <li>Don't share personal information during a livestream.</li>
+            <li>Know how to block or report inappropriate viewers or comments.</li>
+            <li>Set time limits on your livestream sessions to avoid overexposure.</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
     <footer>
+        <p>You are here: Livestreaming</p>
         <p>&copy; 2024 SMC Ltd. | <a href="https://facebook.com">Facebook</a> | <a href="https://twitter.com">Twitter</a></p>
     </footer>
 </body>
