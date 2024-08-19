@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMC - Most Popular Apps</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/apps.js" defer></script>
+    <script src="js/tips.js" defer></script>
 </head>
 <body>
     <header>
@@ -51,9 +51,17 @@
 
     <section id="search-tips">
         <h2>Search Safety Tips</h2>
-        <input type="text" id="searchBar" placeholder="Search safety tips..." onkeyup="searchTips()">
+        <input type="text" id="searchBar" placeholder="Search safety tips...">
         <div id="searchResults" style="display:none;"></div>
     </section>
+    
+    <section id="add-tip">
+        <h2>Add a New Safety Tip</h2>
+        <form id="addTipForm">
+            <textarea id="newTip" name="tip" rows="3" placeholder="Enter a new safety tip..." required></textarea><br><br>
+            <input type="submit" value="Add Tip">
+        </form>
+    </section>    
 
     <!-- Footer -->
     <footer>

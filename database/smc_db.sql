@@ -13,5 +13,6 @@ CREATE TABLE members (
 
 CREATE TABLE safety_tips (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    tip TEXT NOT NULL
+    tip TEXT NOT NULL,
+    time_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
