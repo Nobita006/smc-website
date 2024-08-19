@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMC - Contact</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="information.html">Information</a></li>
+                <li><a href="apps.html">Most Popular Apps</a></li>
+                <li><a href="parents.html">How Parents Can Help</a></li>
+                <li><a href="livestreaming.html">Livestreaming</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="legislation.html">Legislation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Contact Us</h1>
+        <form action="php/contact.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+            <input type="submit" value="Send">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 SMC Ltd. | <a href="https://facebook.com">Facebook</a> | <a href="https://twitter.com">Twitter</a></p>
+    </footer>
+</body>
+</html>
