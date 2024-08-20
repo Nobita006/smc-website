@@ -4,10 +4,21 @@ async function fetchTips(query = '') {
     const searchResults = document.getElementById('searchResults');
     searchResults.innerHTML = '';
 
+    const highlightQuery = (text, query) => {
+        const regex = new RegExp(`(${query})`, 'gi');
+        return text.replace(regex, '<span class="highlight">$1</span>');
+    };
+
     tips.forEach(tip => {
         const tipDiv = document.createElement('div');
         const tipText = document.createElement('p');
-        tipText.textContent = tip.tip;
+
+        // Highlight the matched part
+        if (query) {
+            tipText.innerHTML = highlightQuery(tip.tip, query);
+        } else {
+            tipText.textContent = tip.tip;
+        }
 
         const editInput = document.createElement('input');
         editInput.type = 'text';

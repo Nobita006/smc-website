@@ -170,16 +170,21 @@ section {
     font-size: 16px;
 }
 
+#search {
+    position: relative;
+    z-index: 1000; /* Ensure search section is on top */
+    margin-bottom: 20px; /* Add some space to avoid overlap with the next section */
+}
+
 #searchResults {
-    position: absolute;
     background-color: #fff;
     border: 1px solid #ccc;
-    width: 100%;
-    max-width: 300px;
+    width: 99%;
+    max-height: 300px; /* Increase max-height for better viewing */
+    overflow-y: auto; /* Make the results scrollable if they exceed max-height */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 10; /* Ensure dropdown is above other elements */
-    margin-top: 5px; /* Adds space between the input and the dropdown */
-    z-index: 1010; /* Ensuring the search dropdown is above everything else */
+    margin-top: 10px; /* Add margin to separate from the input field */
+    padding: 10px; /* Add padding for better readability */
 }
 
 .search-result-item {
@@ -189,15 +194,21 @@ section {
     display: block;
     cursor: pointer;
     background-color: #fff;
+    margin-bottom: 10px; /* Add space between results */
 }
 
 .search-result-item:hover {
     background-color: #f1f1f1;
 }
 
-#search {
-    position: relative;/* Increase space below the search section to avoid overlap */
-    z-index: 1000; /* Ensure search section is on top */
+#search input[type="text"] {
+    width: 100%; /* Keep the full width */
+    padding: 15px; /* Increase padding for a larger input box */
+    margin: 10px 0; /* Add margin for better spacing */
+    box-sizing: border-box;
+    font-size: 18px; /* Increase font size for better readability */
+    border: 1px solid #ccc; /* Add a border to define the input box */
+    border-radius: 5px; /* Add border-radius for rounded corners */
 }
 
 footer {
@@ -207,8 +218,11 @@ footer {
     padding: 10px;
     position: relative;
     width: 100%;
-    bottom: 0;
-    z-index: 1; /* Ensure footer is below dropdown */
+    bottom: 0; /* Ensure footer is below dropdown */
+}
+
+.highlight {
+    font-weight: bold; /* Optional: Make the highlighted text bold */
 }
 
 @media only screen and (max-width: 600px) {

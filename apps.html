@@ -49,18 +49,18 @@
         </ul>
     </section>
 
-    <section id="search-tips">
-        <h2>Search Safety Tips</h2>
-        <input type="text" id="searchBar" placeholder="Search safety tips...">
-        <div id="searchResults" style="display:none;"></div>
-    </section>
-    
     <section id="add-tip">
         <h2>Add a New Safety Tip</h2>
         <form id="addTipForm">
             <textarea id="newTip" name="tip" rows="3" placeholder="Enter a new safety tip..." required></textarea><br><br>
             <input type="submit" value="Add Tip">
         </form>
+    </section>
+
+    <section id="search">
+        <h2>Search Safety Tips</h2>
+        <input type="text" id="searchBar" placeholder="Search safety tips...">
+        <div id="searchResults"></div> <!-- Moved to be a separate block within the section -->
     </section>    
 
     <!-- Footer -->
