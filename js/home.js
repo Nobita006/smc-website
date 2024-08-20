@@ -1,8 +1,3 @@
-function toggleMenu() {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('show');
-}
-
 // Fetch Weather Data (OpenWeatherMap API)
 async function fetchWeather() {
     const apiKey = '15f8d887d3d1476f573db502295a47ae';
@@ -87,26 +82,4 @@ function searchFunction() {
 fetchWeather();
 fetchQuote();
 
-document.addEventListener('DOMContentLoaded', function () {
-    const dropdowns = document.querySelectorAll('.dropbtn');
-    dropdowns.forEach(dropbtn => {
-        dropbtn.addEventListener('click', function (event) {
-            event.preventDefault();
-            const dropdownContent = this.nextElementSibling;
-            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
-        });
-    });
-
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-            const dropdownContents = document.querySelectorAll('.dropdown-content');
-            dropdownContents.forEach(content => {
-                if (content.style.display === 'block') {
-                    content.style.display = 'none';
-                }
-            });
-        }
-    }
-});
 

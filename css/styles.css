@@ -4,44 +4,47 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     cursor: url('images/custom-cursor.png'), auto;
-}
-
-/* Custom cursor specifically for links (hover state) */
-a:hover {
-    cursor: url('images/custom-hand-cursor.png'), pointer; /* Custom hand cursor on hover */
+    line-height: 1.6;
+    color: #333;
 }
 
 header {
     z-index: 1000;
     position: relative;
+    background-color: #333;
+    padding: 10px 0;
 }
 
 header nav ul {
     list-style-type: none;
     padding: 0;
-    background-color: #333;
     margin: 0;
-    z-index: 1000;
-    position: relative;
+    display: flex;
+    justify-content: center; /* Center align the navigation menu */
 }
 
 header nav ul li {
-    display: inline-block;
     margin-right: 20px;
     position: relative;
 }
 
 header nav ul li a {
     color: white;
-    padding: 14px 14px; /* Slightly increase padding */
-    font-size: 18px; /* Increase font size */
+    padding: 14px 20px; /* Increase padding for better clickability */
+    font-size: 18px;
     text-decoration: none;
     display: block;
+    transition: background-color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    background-color: #111;
+    background-color: #444; /* Softer hover effect */
 }
+
+.hamburger {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .hamburger {
         display: block;
@@ -54,14 +57,13 @@ header nav ul li a:hover {
         width: 30px;
         height: 4px;
         margin: 5px auto;
-        background-color: black;
+        background-color: white;
     }
 
     header nav ul {
         display: none; /* Hide the menu by default */
         flex-direction: column;
         width: 100%;
-        background-color: #333;
     }
 
     header nav ul.show {
@@ -71,11 +73,12 @@ header nav ul li a:hover {
     header nav ul li {
         display: block;
         width: 100%;
+        text-align: center;
     }
 
     header nav ul li a {
-        padding: 15px 20px; /* Increase padding for more spacing */
-        font-size: 18px; /* Increase font size */
+        padding: 15px 20px;
+        font-size: 18px;
     }
 }
 
@@ -84,7 +87,7 @@ header nav ul li a:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 400px; /* Adjust the height as needed */
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,26 +97,74 @@ header nav ul li a:hover {
 }
 
 .hero-content {
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent overlay to improve text readability */
+    background-color: rgba(0, 0, 0, 0.6); /* Stronger overlay for better contrast */
     padding: 20px;
     border-radius: 8px;
 }
 
 .hero-section h1 {
-    font-size: 3em; /* Adjust the size as needed */
+    font-size: 3em;
     font-weight: bold;
     margin: 0;
 }
 
 .hero-section p {
-    font-size: 1.5em; /* Adjust the size as needed */
+    font-size: 1.5em;
     margin: 10px 0 0 0;
 }
 
-/* Dropdown CSS */
-.dropdown {
+section {
+    padding: 40px 20px;
+    background-color: #fff;
+    margin: 20px auto;
     position: relative;
-    display: inline-block;
+    z-index: 1;
+    max-width: 1200px; /* Limit the max width of sections for better readability */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners for a modern look */
+}
+
+#search-tips {
+    text-align: center;
+}
+
+#search input[type="text"] {
+    width: 80%;
+    padding: 15px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 30px;
+}
+
+#searchResults {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.search-result-item {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    background-color: #fff;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.search-result-item:hover {
+    background-color: #f1f1f1;
 }
 
 .dropbtn {
@@ -130,8 +181,8 @@ header nav ul li a:hover {
     position: absolute;
     background-color: #333;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1001; /* Ensure dropdown content is above other elements */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
 }
 
 .dropdown-content a {
@@ -154,75 +205,19 @@ header nav ul li a:hover {
     background-color: #111;
 }
 
-section {
-    padding: 20px;
-    background-color: #fff;
-    margin: 20px 0;
-    position: relative;
-    z-index: 1; /* Ensure content is below dropdown */
-}
-
-#search input[type="text"] {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    font-size: 16px;
-}
-
-#search {
-    position: relative;
-    z-index: 1000; /* Ensure search section is on top */
-    margin-bottom: 20px; /* Add some space to avoid overlap with the next section */
-}
-
-#searchResults {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    width: 99%;
-    max-height: 300px; /* Increase max-height for better viewing */
-    overflow-y: auto; /* Make the results scrollable if they exceed max-height */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    margin-top: 10px; /* Add margin to separate from the input field */
-    padding: 10px; /* Add padding for better readability */
-}
-
-.search-result-item {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    cursor: pointer;
-    background-color: #fff;
-    margin-bottom: 10px; /* Add space between results */
-}
-
-.search-result-item:hover {
-    background-color: #f1f1f1;
-}
-
-#search input[type="text"] {
-    width: 100%; /* Keep the full width */
-    padding: 15px; /* Increase padding for a larger input box */
-    margin: 10px 0; /* Add margin for better spacing */
-    box-sizing: border-box;
-    font-size: 18px; /* Increase font size for better readability */
-    border: 1px solid #ccc; /* Add a border to define the input box */
-    border-radius: 5px; /* Add border-radius for rounded corners */
-}
-
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     position: relative;
     width: 100%;
-    bottom: 0; /* Ensure footer is below dropdown */
+    bottom: 0;
 }
 
 .highlight {
-    font-weight: bold; /* Optional: Make the highlighted text bold */
+    font-weight: bold;
+    background-color: yellow;
 }
 
 @media only screen and (max-width: 600px) {
@@ -230,4 +225,63 @@ footer {
         display: block;
         margin: 0;
     }
+
+    section {
+        padding: 20px;
+    }
+
+    #search input[type="text"] {
+        width: 90%;
+    }
+}
+
+/* Add a New Safety Tip Section */
+#add-tip {
+    max-width: 1200px; /* Match width with other sections */
+    text-align: left; /* Align text to the left for consistency */
+}
+
+#addTipForm {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align elements to the left */
+}
+
+#addTipForm textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    resize: vertical; /* Allow vertical resizing */
+    margin-bottom: 20px;
+}
+
+#addTipForm input[type="submit"] {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#addTipForm input[type="submit"]:hover {
+    background-color: #444;
+}
+
+/* Ensure Consistent Spacing */
+#add-tip textarea,
+#add-tip input[type="submit"] {
+    margin-top: 10px;
+}
+
+/* Adjust Text Area and Button for Consistency */
+#add-tip textarea {
+    margin-bottom: 0px;
+    width: 100%;
+    box-sizing: border-box;
 }
