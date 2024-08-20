@@ -118,7 +118,6 @@ section {
     background-color: #fff;
     margin: 20px auto;
     position: relative;
-    z-index: 1;
     max-width: 1200px; /* Limit the max width of sections for better readability */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
     border-radius: 8px; /* Rounded corners for a modern look */
@@ -143,12 +142,13 @@ section {
 #searchResults {
     background-color: #fff;
     border: 1px solid #ccc;
-    width: 100%;
+    width: 97%;
     max-height: 300px;
     overflow-y: auto;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 20px;
     box-sizing: border-box;
+    z-index: 10;
 }
 
 .search-result-item {
@@ -371,4 +371,17 @@ header nav ul li a.active {
     background-color: #555; /* A darker background color to indicate the active page */
     color: white; /* Ensure the text color contrasts with the background */
     border-radius: 4px; /* Optional: Adds rounded corners to the active link */
+}
+
+.sketchfab-embed-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* Adjust the margin as needed */
+}
+
+.sketchfab-embed-wrapper iframe {
+    max-width: 100%;
+    border-radius: 8px; /* Optional: add rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for depth */
 }
