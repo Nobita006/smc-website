@@ -15,7 +15,7 @@ async function fetchWeather() {
     }
 }
 
-// Fetch Daily Quote (Quotable API)
+// Fetch Daily Quote (API Ninjas)
 async function fetchQuote() {
     const apiKey = '/RadM/mLFGB7/cc85mj+oQ==pMfQPHvH2qTPqHUg';  // Replace with your actual API key from API Ninjas
     try {

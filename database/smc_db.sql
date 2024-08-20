@@ -8,7 +8,7 @@ CREATE TABLE members (
     email VARCHAR(100) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
     login_attempts INT DEFAULT 0,
-    lock_time TIMESTAMP NULL
+    lock_time TIMESTAMP NULL DEFAULT NULL
 );
 
 CREATE TABLE safety_tips (
