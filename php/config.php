@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "root"; // Default for XAMPP/WAMP/MAMP
-$password = ""; // Default for XAMPP/WAMP/MAMP
+$username = "root";
+$password = "";
 $dbname = "smc_db";
 
 // Create connection

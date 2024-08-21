@@ -35,4 +35,3 @@ INSERT INTO `safety_tips` (`id`, `tip`, `time_created`) VALUES
 (8, 'Avoid oversharing on social media, especially details about your daily routines.', '2024-08-19 19:44:00'),
 (9, 'Report and block any suspicious or inappropriate users on social media platforms.', '2024-08-19 19:44:00'),
 (10, 'Teach children about the dangers of interacting with strangers online.', '2024-08-19 19:44:00');
-COMMIT;

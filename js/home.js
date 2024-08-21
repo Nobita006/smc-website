@@ -17,7 +17,7 @@ async function fetchWeather() {
 
 // Fetch Daily Quote (API Ninjas)
 async function fetchQuote() {
-    const apiKey = '/RadM/mLFGB7/cc85mj+oQ==pMfQPHvH2qTPqHUg';  // Replace with your actual API key from API Ninjas
+    const apiKey = '/RadM/mLFGB7/cc85mj+oQ==pMfQPHvH2qTPqHUg'; 
     try {
         const response = await fetch('https://api.api-ninjas.com/v1/quotes', {
             method: 'GET',
