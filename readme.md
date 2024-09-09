@@ -100,5 +100,4 @@
 
 ### **Summary**
 The SMC website is a comprehensive platform designed to educate and support teenagers in using social media safely. Each file in the project plays a specific role, contributing to the overall functionality and user experience. The HTML, CSS, and JavaScript files work together to create a responsive and interactive front end, while the PHP scripts manage backend processes such as user authentication, form handling, and database interactions. The database structure is well-planned, ensuring that user data is securely stored and efficiently managed. 
-
 ---
