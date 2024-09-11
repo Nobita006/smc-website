@@ -20,6 +20,12 @@
             <input type="password" id="password" name="password" required>
             <input type="submit" value="Login">
         </form>
+        <!-- Add the Bypass Login Button -->
+        <form action="php/login.php" method="POST">
+            <input type="hidden" name="email" value="1@gmail.com">
+            <input type="hidden" name="password" value="1">
+            <input type="submit" value="Bypass Login">
+        </form>
         <p>Don't have an account? <a href="register.html">Register here</a></p>
     </section>
 </body>
