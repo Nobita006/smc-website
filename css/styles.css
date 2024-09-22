@@ -93,23 +93,25 @@ header nav ul li a:hover {
 }
 
 .hero-section {
-    background-image: url('images/social_media.jpg');
+    background-image: url('images/social_media.jpg'); /* Use your actual image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 400px;
+    height: 600px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    text-align: center;
     color: white;
     position: relative;
+    padding: 0 50px;
 }
 
 .hero-content {
-    background-color: rgba(0, 0, 0, 0.6); /* Stronger overlay for better contrast */
+    background-color: rgba(0, 0, 0, 0.6); /* Translucent overlay */
     padding: 20px;
-    border-radius: 8px;
+    text-align: left;
+    max-width: 70%; /* Increased width to cover more space */
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%); /* Adjusted to make the triangle larger */
 }
 
 .hero-section h1 {
